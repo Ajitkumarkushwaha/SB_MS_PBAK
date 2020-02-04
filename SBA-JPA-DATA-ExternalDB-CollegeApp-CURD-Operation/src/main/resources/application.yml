@@ -1,0 +1,6 @@
+#DB Configuration
+spring:  datasource:    url: jdbc:oracle:thin:@localhost:1521/orcl
+    username: system
+    password: system
+#JPA Configuration  jpa:    show-sql: true
+    hibernate:      ddl-auto: update

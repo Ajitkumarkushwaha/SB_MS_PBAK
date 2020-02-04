@@ -1,0 +1,26 @@
+package com.app.runner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Component;
+
+import com.app.repository.AdminRepository;
+@Component
+public class AdminRunner implements ApplicationRunner {
+
+	@Autowired
+	private AdminRepository adminRepository;
+	@Override
+	public void run(ApplicationArguments args) throws Exception {
+
+		/*Admin admin = new Admin(1011,"RAJA","DEV",909090909l);
+		Admin savedAdmin = adminRepository.save(admin);
+		System.out.println(savedAdmin);
+		*/
+		adminRepository.findAll(PageRequest.of(0, 2)).forEach(System.out::println);
+		System.out.println();
+	}
+
+}

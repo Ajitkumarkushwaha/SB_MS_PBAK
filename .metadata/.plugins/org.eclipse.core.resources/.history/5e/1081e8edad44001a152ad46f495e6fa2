@@ -1,0 +1,23 @@
+package com.app.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.app.entity.CustomerDtlsEntity;
+
+/**
+ * 
+ * @author AJIT KUMAR
+ *
+ */
+
+public interface CustomerDtlsRepository extends JpaRepository<CustomerDtlsEntity, Integer> {
+  @Query("SELECT C FROM  CustomerDtlsEntity C")
+  List<CustomerDtlsEntity>	findAllEmp();
+  
+  
+  @Query("SELECT C FROM  CustomerDtlsEntity C WHERE C.customerName=?1")
+  List<CustomerDtlsEntity>	findAllEmpByName(String customerName);
+}

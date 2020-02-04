@@ -1,0 +1,40 @@
+package com.app.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.app.entity.CityDtlsEntity;
+
+/**
+ *
+ * @version 1.0
+ * @author AJIT KUMAR
+ * @since 2020
+ */
+
+public interface CityDtlsRepository extends JpaRepository<CityDtlsEntity, String> {
+	/**
+	 * 
+	 * @param cityCode
+	 * @target Modify The  Population of city Based On City Code
+	 * @return All Population Of City
+	 */
+	@Query("UPDATE CityDtlsEntity C SET C.allPopulation=:allPopulation WHERE C.cityCode=:cityCode")
+	Integer modifyAllPopulationByCityCode(Long allPopulation , String cityCode);
+
+	/**
+	 * 
+	 * @target Remove The City Details Based On City Code
+	 * @param cityCode
+	 * @return boolean Result
+	 */
+	@Query("SELECT C.malePopulation, C.femalePopulation FROM CityDtlsEntity C WHERE C.cityCode=:cityCode")
+	boolean removeCityByCityCode(String cityCode);
+
+	/**
+	 * 
+	 * @uses Implement This Repository Interface To Your Classes And Use it
+	 */
+}

@@ -1,0 +1,25 @@
+package com.app.runner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.stereotype.Component;
+
+import com.app.entity.FarmerDtlsEntity;
+import com.app.repository.FarmerDtlsRepository;
+
+@Component
+public class FarmerDtlsRunner implements ApplicationRunner {
+
+	@Autowired
+	private FarmerDtlsRepository farmerRepository;
+	
+	@Override
+	public void run(ApplicationArguments args) throws Exception {
+
+		FarmerDtlsEntity entity = new FarmerDtlsEntity(370341265773l,"13298AK","AJIT KUMAR","GOLAGHAT",8002077883l);
+		FarmerDtlsEntity savedFarmer = farmerRepository.save(entity);
+		System.out.println(savedFarmer);
+	}
+
+}

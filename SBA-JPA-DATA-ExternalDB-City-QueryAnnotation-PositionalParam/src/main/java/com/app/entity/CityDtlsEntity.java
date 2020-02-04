@@ -1,0 +1,47 @@
+package com.app.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+
+/**
+ * 
+ * @author AJIT KUMAR
+ * @since 1.0.0
+ *
+ */
+@NoArgsConstructor
+@AllArgsConstructor
+@RequiredArgsConstructor
+@Setter
+@Getter
+@ToString
+@Entity
+@Table(name = "CITY_DTLS")
+public class CityDtlsEntity {
+
+	@Id
+	@Column(name = "CITY_CODE")
+	private String cityCode;
+	@NonNull
+	@Column(name = "CITY_NAME")
+	private String cityName;
+	@NonNull
+	@Column(name = "MALE_POPULATION")
+	private Long malePopulation;
+	@NonNull
+	@Column(name = "FEMALE_POPULATION")
+	private Long femalePopulation;
+	@Column(name = "ALL_POPULATION")
+	private Long allPopulation;
+}

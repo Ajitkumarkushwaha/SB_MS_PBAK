@@ -1,0 +1,21 @@
+package com.app.service;
+
+import java.util.List;
+
+import com.app.entity.CollegeDtlsEntity;
+
+/**
+ * 
+ * @author AJIT KUMAR
+ * @since 2020
+ *
+ */
+public interface CollegeDtlsService {
+	
+	
+	public boolean saveCollegeDetails(CollegeDtlsEntity entity);
+	public List<CollegeDtlsEntity> getAllCollegeDetials();
+	public boolean updateCollegeDetails(CollegeDtlsEntity entity);
+	public boolean removeCollegeDetails(CollegeDtlsEntity entity);
+ 
+}

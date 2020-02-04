@@ -1,0 +1,12 @@
+package com.app.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.app.entity.Farmer;
+import com.app.entity.FarmerDtlsEntity;
+
+public interface FarmerDtlsRepository extends JpaRepository<FarmerDtlsEntity, Integer> {
+	
+	public List<Farmer> 
+
+}

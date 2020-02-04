@@ -1,0 +1,27 @@
+package com.app.service;
+
+import java.util.List;
+
+import com.app.entity.CityDtlsEntity;
+
+public class CityDtlsServiceImpl implements CityDtlsService{
+
+	@Override
+	public List<CityDtlsEntity> getAllCity() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Long> getAllPopulationByCityCode(String cityCode) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Object[]> getAllMaleAndFemalePopulation(String cityCode) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

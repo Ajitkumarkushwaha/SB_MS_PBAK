@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;e&apos; in &apos;com.app.runner.EmployeeServiceRunner.run(...)&apos; to &apos;emp&apos;&#x0D;&#x0A;- Original project: &apos;SpringBootApplicationLombokTestApp&apos;&#x0D;&#x0A;- Original element: &apos;com.app.runner.EmployeeServiceRunner.run(String...).e&apos;&#x0D;&#x0A;- Renamed element: &apos;e&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;e&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.app.runner{EmployeeServiceRunner.java[EmployeeServiceRunner~run~\[QString;@e!317!346!326!326!QEmployee;!0!false" name="emp" references="true" stamp="1578315365455" version="1.0"/>
+</session>

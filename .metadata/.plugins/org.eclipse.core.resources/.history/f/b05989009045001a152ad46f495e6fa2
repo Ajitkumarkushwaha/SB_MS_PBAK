@@ -1,0 +1,64 @@
+package com.app.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.app.entity.CollegeDtlsEntity;
+import com.app.repositrory.CollegeDtlsRepository;
+
+/**
+ * 
+ * @author AJIT KUMAR
+ *
+ */
+
+@Service
+public class CollegeDtlsServiceImpl implements CollegeDtlsService {
+
+	@Autowired
+	private CollegeDtlsRepository collegeRepository;
+
+	/**
+	 * 
+	 * @param entity
+	 * @see call The saveCollegeDetails Method
+	 * @return If Records Are Inserted Then It Will Return True Other Wise It Will
+	 *         Return False
+	 */
+	@Override
+	public boolean saveCollegeDetails(CollegeDtlsEntity entity) {
+		return collegeRepository.save(entity) != null;
+	}
+
+	/**
+	 * 
+	 * @param entity
+	 * @see call The saveCollegeDetails Method
+	 * @return If Records Are Updated Then It Will Return True Other Wise It Will
+	 *         Return False
+	 */
+	@Override
+	public boolean updateCollegeDetails(CollegeDtlsEntity entity) {
+		return collegeRepository.save(entity) != null;
+	}
+
+	/**
+	 * @see call The getAllCollegeDetails Methos
+	 * @return If Records Are Existed Then It Will Return All Records
+	 */
+	@Override
+	public List<CollegeDtlsEntity> getAllCollegeDetials() {
+		return collegeRepository.findAll();
+	}
+	
+	/**
+	 * @see call deleteById And Remove The College Details Based On College COde
+	 */
+	
+	@Override
+	public void removeCollegeDetailsByCode(String collegeCode) {
+		collegeRepository.deleteById(collegeCode); 
+	}
+}

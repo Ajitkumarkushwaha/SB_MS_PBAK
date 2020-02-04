@@ -1,0 +1,5 @@
+#Port Number
+server:  port: 9595
+---
+spring:  mvc:    view:      prefix: /WEB-INF/views/
+      suffix: .jsp

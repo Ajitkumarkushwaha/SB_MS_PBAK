@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome</title>
+
+<style type="text/css">
+h1 {
+	color: white;
+	background-color: orangered;
+	width: 640px;
+	height: 240px;
+	border: none;
+	border-redius: 10px
+	box-shadow: 0 0 10px black;
+}
+</style>
+</head>
+<body>
+	<h1>Welcome To All Enjoy Spring Web MVC Learning..!!!</h1>
+</body>
+</html>

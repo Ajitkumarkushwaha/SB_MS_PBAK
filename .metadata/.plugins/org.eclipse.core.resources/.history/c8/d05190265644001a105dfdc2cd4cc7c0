@@ -1,0 +1,14 @@
+package com.app.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.app.entity.CustomerDtlsEntity;
+
+
+public interface CustomerDtlsRepository extends JpaRepository<CustomerDtlsEntity, Integer> {
+  @Query("SELECT C FROM  customer_dtls C WHERE C.CUSTOMER_NAME=:customerName")
+  List<CustomerDtlsEntity>	findAllEmpByName(String customerName);
+}

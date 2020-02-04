@@ -1,0 +1,29 @@
+package com.app.entity;
+
+import javax.persistence.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@NoArgsConstructor
+@RequiredArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
+@ToString
+public class Admin {
+
+	@Id
+	private Integer adminId;
+	@NonNull
+	private String adminName;
+	@NonNull
+	private String adminDept;
+	@NonNull
+	private Long adminMobNo;
+}

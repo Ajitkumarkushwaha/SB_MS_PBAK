@@ -1,0 +1,19 @@
+package com.app.repositrory;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.app.entity.CollegeDtlsEntity;
+
+/**
+ * 
+ * @author AJIT KUMAR
+ * @since 2020
+ *
+ */
+public interface CollegeDtlsRepository extends JpaRepository<CollegeDtlsEntity, String> {
+	
+	List<CollegeDtlsEntity> findByCollgeName(String collegeName);
+
+}

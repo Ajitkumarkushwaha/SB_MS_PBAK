@@ -1,0 +1,15 @@
+package com.app.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.app.entity.CityDtlsEntity;
+
+/**
+ * 
+ * @author AJIT KUMAR
+ *
+ */
+
+public interface CityDtlsRepository extends JpaRepository<CityDtlsEntity, String>{
+
+}

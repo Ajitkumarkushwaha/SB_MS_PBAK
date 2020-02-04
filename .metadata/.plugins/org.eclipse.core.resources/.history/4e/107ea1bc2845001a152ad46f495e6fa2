@@ -1,0 +1,37 @@
+package com.app;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.app.entity.CollegeDtlsEntity;
+import com.app.service.CollegeDtlsServiceImpl;
+
+/**
+ * 
+ * @author AJIT KUMAR
+ *
+ */
+
+
+@SpringBootApplication
+public class SbaJpaDataExternalDbCollegeAppCurdOperationApplication {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext ctxt = SpringApplication.run(SbaJpaDataExternalDbCollegeAppCurdOperationApplication.class, args);
+		CollegeDtlsServiceImpl collegeService = ctxt.getBean(CollegeDtlsServiceImpl.class);
+		
+		CollegeDtlsEntity entity =new CollegeDtlsEntity("0131","LNCT GROUP","BHOPAL","RGPV",1995,"ANUPAM","ANUPAM",20,300,3500);
+		boolean savedCollege = collegeService.saveCollegeDetails(entity);
+		System.out.println("College Details Are Saved ?. "+savedCollege);
+		
+		
+		CollegeDtlsEntity entity1 =new CollegeDtlsEntity("IITM0130","IES GROUP BHOPAL","BHOPAL","RGPV",2007,"B.S YADAV","SUNITA YADAV", 8 ,80,1100);
+		boolean savedCollege1 = collegeService.updateCollegeDetails(entity1);
+		System.out.println("College Details Are Updated ?. "+savedCollege1);
+		
+		//collegeService.getAllCollegeDetials().forEach(System.out::println);
+		
+	}
+
+}

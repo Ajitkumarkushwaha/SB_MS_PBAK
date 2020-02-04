@@ -1,0 +1,29 @@
+/* Copyright (c) 2020,  KBM GROUP and/or its affiliates. All rights reserved.
+ * KBM PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+package com.app.repositrory;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.app.entity.CollegeDtlsEntity;
+
+/**
+ * 
+ * @author AJIT KUMAR
+ * @since 2020
+ *
+ */
+public interface CollegeDtlsRepository extends JpaRepository<CollegeDtlsEntity, String> {
+	
+	List<CollegeDtlsEntity> findByCollegeName(String collegeName);
+	List<CollegeDtlsEntity> findByCollegeCode(String collegeCode);
+	list<CollegeDtlsEntity> findByCollegLoc(String collgeLoc);
+}

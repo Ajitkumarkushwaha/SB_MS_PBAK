@@ -1,0 +1,7 @@
+1580534803286	Rename resource 'SBA-JPA-DATA-ExternalDB-Customer-QueryAnnotation-PositionalParm'
+1580537044220	Rename resource 'SBA-JPA-DATA-ExternalDB-Former-City-QueryAnnotation-PositionalParm'
+1580540920049	Rename resource 'SBA-JPA-DATA-ExternalDB-Customer-QueryAnnotation-NamedParm'
+1580540938030	Rename resource 'SBA-JPA-DATA-ExternalDB-City-QueryAnnotation-PositionalParm'
+1580540957977	Rename resource 'SBA-JPA-DATA-ExternalDB-QueryAnnotation-NamedParm'
+1580541095870	Rename resource 'SBA-JPA-DATA-ExternalDB-Customer-QueryAnnotation-NonSql-Operation'
+1580541224142	Rename resource 'SBA-JPA-DATA-ExternalDB-Customer-QueryAnnotation-NonSelect-Operation'

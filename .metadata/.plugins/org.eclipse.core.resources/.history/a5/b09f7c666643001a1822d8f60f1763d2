@@ -1,0 +1,23 @@
+package com.app.ruunner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.stereotype.Component;
+
+import com.app.repository.AdminRepository;
+import com.app.repository.AdminRepository.MyAdminData;
+
+@Component
+public class AdminRunner implements ApplicationRunner {
+
+	@Autowired
+	private AdminRepository adminRepository;
+	@Override
+	public void run(ApplicationArguments args) throws Exception {
+
+		adminRepository.findByAdminId(1112, MyAdminData.class).stream().map(m->m.getAdminName()+"=="
+		+m.getAdminDept()+"="+m.getAdminMobNo()).forEach(System.out::println);;
+	}
+
+}

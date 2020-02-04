@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome </title>
+	<style type="text/css">
+      h1{
+      height: 300px;
+      width: 640px;
+      background-color: orangered;
+      border: none;
+      color: white;
+      box-shadow: 0 0 15px 0 black;
+      }	
+	</style>
+</head>
+<body>
+<h1>Welcome To All Enjoy Spring Web MVC Learning..!!!</h1>
+</body>
+</html>

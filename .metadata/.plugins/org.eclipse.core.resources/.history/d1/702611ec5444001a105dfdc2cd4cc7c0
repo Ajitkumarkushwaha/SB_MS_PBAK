@@ -1,0 +1,26 @@
+package com.app.runner;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.stereotype.Component;
+
+import com.app.entity.CustomerDtlsEntity;
+import com.app.repository.CustomerDtlsRepository;
+
+@Component
+public class CustomerDtlsRunner implements ApplicationRunner {
+
+	@Autowired
+	private CustomerDtlsRepository customerRepository;
+	@Override
+	public void run(ApplicationArguments args) throws Exception {
+		
+		/*CustomerDtlsEntity entity = new CustomerDtlsEntity(11013,"RAJESH",77989765l,"GKP");
+		CustomerDtlsEntity savedEntity = customerRepository.save(entity);
+		System.out.println(savedEntity);*/
+		// customerRepository.findAllEmpByName("RAJA").forEach(System.out::println);;
+	}
+
+}

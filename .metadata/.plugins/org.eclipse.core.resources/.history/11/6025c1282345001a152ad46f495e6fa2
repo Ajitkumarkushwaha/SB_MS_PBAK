@@ -1,0 +1,13 @@
+package com.app.service;
+
+import com.app.entity.CollegeDtlsEntity;
+
+public class CollegeDtlsServiceImpl implements CollegeDtlsService {
+
+	@Override
+	public boolean saveCollegeDetails(CollegeDtlsEntity entity) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

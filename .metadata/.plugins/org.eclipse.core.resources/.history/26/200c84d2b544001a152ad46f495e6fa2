@@ -1,0 +1,26 @@
+package com.app.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.app.entity.CityDtlsEntity;
+
+/**
+ * 
+ * @author AJIT KUMAR
+ *
+ */
+
+public interface CityDtlsRepository extends JpaRepository<CityDtlsEntity, String> {
+
+	/**
+	 * 
+	 * @target Get The All City Details
+	 * 
+	 */
+	@Query("SELECT C FROM CityDtlsEntity C")
+	List<CityDtlsEntity> findAllCity();
+
+}

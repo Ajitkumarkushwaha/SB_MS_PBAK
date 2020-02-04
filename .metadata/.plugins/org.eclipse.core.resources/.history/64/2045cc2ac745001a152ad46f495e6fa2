@@ -1,0 +1,103 @@
+/* Copyright (c) 2020,  KBM GROUP and/or its affiliates. All rights reserved.
+ * KBM PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+package com.app;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.app.service.CollegeDtlsServiceImpl;
+
+/**
+ * 
+ * @author AJIT KUMAR
+ * @since 2020
+ *
+ */
+
+@SpringBootApplication
+public class SbaJpaDataExternalDbCollegeAppCurdOperationApplication {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext ctxt = SpringApplication
+				.run(SbaJpaDataExternalDbCollegeAppCurdOperationApplication.class, args);
+		CollegeDtlsServiceImpl collegeService = ctxt.getBean(CollegeDtlsServiceImpl.class);
+
+		/**
+		 * 
+		 * @param pass the entity and call the save method
+		 * @return if record is inserted than it will return true otherwise false
+		 */
+		/*
+		 * CollegeDtlsEntity entity =new
+		 * CollegeDtlsEntity("ICOT0177","IES COLLEGE","BHOPAL","RGPV",2007,"B.S YADAV"
+		 * ,"SUNITA YADAV",15,200,2500); boolean savedCollege =
+		 * collegeService.saveCollegeDetails(entity);
+		 * System.out.println("College Details Are Saved ?. "+savedCollege);
+		 */
+		/**
+		 * 
+		 * @param pass the entity and call the save method
+		 * @see if primary key column data is existed then it will perform update
+		 *      operation otherwise insert operation
+		 * @return if record is update/inserted than it will return true otherwise false
+		 */
+		/*
+		 * CollegeDtlsEntity entity1 =new
+		 * CollegeDtlsEntity("IITM0130","IES GROUP BHOPAL","BHOPAL","RGPV",
+		 * 2007,"B.S YADAV","SUNITA YADAV", 8 ,80,1100); boolean savedCollege1 =
+		 * collegeService.updateCollegeDetails(entity1);
+		 * System.out.println("College Details Are Updated ?. "+savedCollege1);
+		 */
+		/**
+		 * 
+		 * @see call getAllCollegeDetails method
+		 * @return if records are existed then it will return all records
+		 */
+		// collegeService.getAllCollegeDetials().forEach(System.out::println);
+		/**
+		 * @see call The removeCollegeDetailsByCode method
+		 * @return If Records Are existed Based On Given College Code then it will
+		 *         remove the records.
+		 */
+		/*
+		 * collegeService.removeCollegeDetailsByCode("0131");
+		 * System.out.println(" College Details Are Removed ?");
+		 */
+		/**
+		 * 
+		 * @param collageName
+		 * @see call the getCollegeDetailsByCollegeName method
+		 * @return collgeDetails Based On Collge Name
+		 * 
+		 */
+		// collegeService.getCollegeDetailsByCollegeName("IES GROUP
+		// BHOPAL").forEach(System.out::println);
+		/**
+		 * 
+		 * @param collageCode
+		 * @see call the getCollegeDetailsByCollegeCode method
+		 * @return collgeDetails Based On Collge Code
+		 * 
+		 */
+		//collegeService.getCollegeDetailsByCollegeCode("0131").forEach(System.out::println);
+		
+		/**
+		 * 
+		 * @param collageCode
+		 * @see call the getCollegeDetailsByCollegeCode method
+		 * @return collgeDetails Based On Collge Code
+		 * 
+		 */
+	
+		collegeService.getCollegeDetailsByCollegeLoc("BHOPAL").forEach(System.out::println);
+	}
+
+}

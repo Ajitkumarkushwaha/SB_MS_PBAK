@@ -1,0 +1,9 @@
+#Input-Data
+my:
+  data:
+    emp-id: 1221
+    emp-name: Krishna
+    emp-sal: 15.6
+    proj:
+    - Project1
+    - Project2

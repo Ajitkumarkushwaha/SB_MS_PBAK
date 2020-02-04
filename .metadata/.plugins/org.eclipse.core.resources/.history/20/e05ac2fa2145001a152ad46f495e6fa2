@@ -1,0 +1,7 @@
+package com.app.repositrory;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CollegeDtlsRepository extends JpaRepository<T, ID> {
+
+}

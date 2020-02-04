@@ -1,0 +1,11 @@
+create table city_dtls (city_code varchar2(15) primary key, city_name varchar2(35), male_population number(18), female_popuation number(18), all_population number(20));
+table CITY_DTLS created.
+
+desc city_dtls;
+Name             Null     Type         
+---------------- -------- ------------ 
+CITY_CODE        NOT NULL VARCHAR2(15) 
+CITY_NAME                 VARCHAR2(35) 
+MALE_POPULATION           NUMBER(18)   
+FEMALE_POPUATION          NUMBER(18)   
+ALL_POPULATION            NUMBER(20)   

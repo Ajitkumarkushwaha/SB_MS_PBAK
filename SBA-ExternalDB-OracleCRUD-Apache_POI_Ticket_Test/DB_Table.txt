@@ -1,0 +1,5 @@
+create table ticket_15273 (ticketid number(30), ticketcode varchar2(25), ticketfare number(13,3), gst number(10,3),total number(13,3));
+
+Table created.
+
+SQL>
